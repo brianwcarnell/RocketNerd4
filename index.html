@@ -72,7 +72,7 @@
         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
     </style>
-    <!-- Import Map: Strictly using React 18 to avoid version conflicts -->
+    <!-- Import Map: Cleaned up to ONLY use React 18 -->
     <script type="importmap">
 {
   "imports": {
@@ -80,8 +80,8 @@
     "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev",
     "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
     "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime?dev",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
-    "react/": "https://esm.sh/react@^19.2.1/"
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/"
   }
 }
 </script>
@@ -96,7 +96,7 @@
         <span>Initializing Mission Control...</span>
       </div>
     </div>
-    <!-- Entry Point: Pointing to bundle.js to avoid MIME type errors with .tsx files -->
+    <!-- Entry Point: Pointing strictly to bundle.js -->
     <script type="text/babel" data-type="module" data-presets="typescript,react" src="./bundle.js"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
