@@ -1,4 +1,4 @@
-import { GEO_BOUNDS } from './constants';
+import { GEO_BOUNDS } from './constants.ts';
 
 export const latLonToXY = (lat: number, lon: number) => {
     // Normalize lat/lon to 0-1 range based on bounds

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo } from 'react';
-import { MAP_IMAGE_URL } from '../constants';
-import { MarkerData } from '../types';
+import { MAP_IMAGE_URL } from '../constants.ts';
+import { MarkerData } from '../types.ts';
 
 interface MapViewProps {
     zoom: number;

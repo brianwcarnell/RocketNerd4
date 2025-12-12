@@ -72,6 +72,7 @@
         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
     </style>
+    <!-- Import Map -->
     <script type="importmap">
 {
   "imports": {
@@ -84,6 +85,8 @@
   }
 }
 </script>
+    <!-- Babel Standalone for in-browser transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <link rel="stylesheet" href="/index.css">
 </head>
   <body class="bg-background-dark text-white font-display antialiased h-screen w-full overflow-hidden">
@@ -93,7 +96,8 @@
         <span>Initializing Mission Control...</span>
       </div>
     </div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Entry Point: Note the type="text/babel" and data-type="module" -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>

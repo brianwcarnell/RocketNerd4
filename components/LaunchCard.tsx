@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { AVATAR_1, AVATAR_2 } from '../constants';
-import { MissionDetails } from '../types';
+import { AVATAR_1, AVATAR_2 } from '../constants.ts';
+import { MissionDetails } from '../types.ts';
 
 interface LaunchCardProps {
     data: MissionDetails;

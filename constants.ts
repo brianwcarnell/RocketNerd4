@@ -1,4 +1,4 @@
-import { MarkerData, MissionDetails } from './types';
+import { MarkerData, MissionDetails } from './types.ts';
 
 export const MAP_IMAGE_URL = "https://lh3.googleusercontent.com/aida-public/AB6AXuCvHNY4BvtLalZcygyFxnsPKnJ4ClAXsPp8iQ_O4qUDLYOJHX2tUPBVVrfvUREGF8983vMmvqEU7mMnSMgE0wq2QSyiZ1LokcjF47g29px06qECuzkcmfkqvWDnnFcFeFHJ14-MeK1bNDT9jJHAzqat1lrl9nEZBv0R88bnjhQsxRSBJZQ3lYdA0caQBy4Ym9JiyJMvxfrnSnWawR4W-QGvbHsg4jgvxtNUnIGi19cCXcs96Gov6ED5PnsEe8bKEe5NhnBYrC9m7zo";
 

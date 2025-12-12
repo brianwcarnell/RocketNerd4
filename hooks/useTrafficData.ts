@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { MarkerData } from '../types';
-import { GEO_BOUNDS } from '../constants';
-import { latLonToXY } from '../utils';
+import { MarkerData } from '../types.ts';
+import { GEO_BOUNDS } from '../constants.ts';
+import { latLonToXY } from '../utils.ts';
 
 export const useTrafficData = (isPlaying: boolean) => {
     const [trafficMarkers, setTrafficMarkers] = useState<MarkerData[]>([]);

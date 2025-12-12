@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import MapView from './components/MapView';
-import TopBar from './components/TopBar';
-import MapControls from './components/MapControls';
-import Timeline from './components/Timeline';
-import LaunchCard from './components/LaunchCard';
-import { MissionDetails, MarkerData } from './types';
-import { useTrafficData } from './hooks/useTrafficData';
+import MapView from './components/MapView.tsx';
+import TopBar from './components/TopBar.tsx';
+import MapControls from './components/MapControls.tsx';
+import Timeline from './components/Timeline.tsx';
+import LaunchCard from './components/LaunchCard.tsx';
+import { MissionDetails, MarkerData } from './types.ts';
+import { useTrafficData } from './hooks/useTrafficData.ts';
 
 // Approximate visual mapping of Pad IDs to X/Y percentages on the background image
 // KSC and CCSFS roughly map to the center-right cluster on this specific graphic
