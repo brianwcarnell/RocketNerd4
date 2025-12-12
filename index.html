@@ -72,7 +72,7 @@
         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       }
     </style>
-    <!-- Import Map -->
+    <!-- Import Map: Strictly using React 18 to avoid version conflicts -->
     <script type="importmap">
 {
   "imports": {
@@ -96,8 +96,8 @@
         <span>Initializing Mission Control...</span>
       </div>
     </div>
-    <!-- Entry Point: Note the type="text/babel" and data-type="module" -->
-    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+    <!-- Entry Point: Pointing to bundle.js to avoid MIME type errors with .tsx files -->
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="./bundle.js"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
