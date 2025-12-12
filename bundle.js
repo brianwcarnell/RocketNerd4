@@ -640,6 +640,7 @@ const App = () => {
   const [rocketMarkers, setRocketMarkers] = useState([]);
   const [selectedMarkerId, setSelectedMarkerId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isPanelOpen, setIsPanelOpen] = useState(true);
 
   const { trafficMarkers, isLiveADSB } = useTrafficData(isPlaying);
 
@@ -763,7 +764,32 @@ const App = () => {
           </div>
         </div>
 
-        <div className="pointer-events-auto w-full px-4 pb-6 pt-2 bg-gradient-to-t from-background-dark via-background-dark/90 to-transparent">
+        {/* Floating Expand Button (Visible when docked) */}
+        <div className={`absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-auto transition-all duration-300 ${isPanelOpen ? 'opacity-0 pointer-events-none translate-y-10' : 'opacity-100 translate-y-0'}`}>
+            <button
+                onClick={() => setIsPanelOpen(true)}
+                className="flex items-center gap-2 bg-primary text-surface-dark font-bold px-6 py-3 rounded-full shadow-[0_0_20px_rgba(48,232,122,0.4)] hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all"
+            >
+                <span className="material-symbols-outlined text-[20px] filled">radar</span>
+                Mission Control
+                <span className="material-symbols-outlined text-[20px]">keyboard_arrow_up</span>
+            </button>
+        </div>
+
+        {/* Collapsible Panel */}
+        <div 
+            className={`pointer-events-auto w-full px-4 pb-6 pt-2 bg-gradient-to-t from-background-dark via-background-dark/90 to-transparent transition-transform duration-500 ease-in-out ${isPanelOpen ? 'translate-y-0' : 'translate-y-full absolute bottom-0'}`}
+        >
+          {/* Collapse Button */}
+          <div className="flex justify-center -mt-6 mb-2">
+              <button
+                  onClick={() => setIsPanelOpen(false)}
+                  className="bg-surface-dark/80 backdrop-blur border border-surface-dark-lighter text-text-secondary hover:text-white rounded-full p-1 shadow-lg hover:bg-surface-dark-lighter transition-all"
+              >
+                  <span className="material-symbols-outlined text-[24px]">keyboard_arrow_down</span>
+              </button>
+          </div>
+          
           <Timeline isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
           {currentLaunchData && <LaunchCard data={currentLaunchData} />}
         </div>
