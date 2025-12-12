@@ -1,0 +1,5 @@
+{
+  "name": "Cape Canaveral Launch Tracker v1",
+  "description": "Real-time tracking dashboard for space launches, maritime traffic, and airspace monitoring around Cape Canaveral.",
+  "requestFramePermissions": []
+}
